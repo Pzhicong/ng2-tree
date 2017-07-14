@@ -1,0 +1,16 @@
+<li *ngIf="dataInput.children">
+  <a>
+    <i class="fa fa-users" *ngIf="false"></i>{{dataInput.text}}
+  </a>
+  <span class="fa fa-chevron-down"></span>
+  <ul>
+    <app-first-nav *ngFor="let item of dataInput.children" [dataInput]="item"></app-first-nav>
+  </ul>
+</li>
+<li *ngIf="!dataInput.children">
+  <a routerLink='dataInput.link'>
+    <i class="fa fa-users" *ngIf="false"></i>{{dataInput.text}}
+  </a>
+</li>
+
+
